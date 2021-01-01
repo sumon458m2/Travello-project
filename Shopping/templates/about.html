@@ -1,0 +1,401 @@
+ {% extends 'home.html' %} {% block content %} {% load static %}
+<!-- about breadcrumb -->
+<section class="w3l-about-breadcrumb">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container pt-lg-5 pt-md-3 p-lg-4 pb-md-3 my-lg-5">
+            <ul class="breadcrumbs-custom-path mt-5 pt-lg-5 text-center">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> About us </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- //about breadcrumb -->
+<section class="w3l-content-6 py-5">
+    <div class="container py-md-5">
+        <!-- /content-6-section -->
+        <div class="content-6-mian">
+            <h5 class="sub-hnytitle mb-2">{{aboutus.0.name}}</h5>
+            <h3 class="w3l-hnytitle mb-5">{{aboutus.0.title}}</h3>
+
+            <div class="content-info-in row">
+                <div class="content-gd col-lg-6 pr-lg-5">
+                    <p>{{aboutus.0.description}}</p>
+                </div>
+                <div class="content-gd col-lg-6">
+                    <p>{{aboutus.0.description1}}</p>
+                </div>
+
+            </div>
+            <div class="discover">
+                <a href="about.html" class="btn btn-style btn-primary mt-md-5 mt-4">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //content-6-section -->
+
+<!-- home block3 -->
+<section class="w3l-content-4 py-5" id="features">
+    <div class="content-4-main py-lg-5 py-md-4 py-2">
+        <div class="container">
+            <h5 class="sub-hnytitle mb-2 text-center">{{lesson.0.name}}</h5>
+            <h3 class="w3l-hnytitle mb-5 text-center">
+                {{lesson.0.title}}s</h3>
+            <div class="content-info-in row">
+                <div class="content-left col-lg-6">
+                    <img src="{{lesson.0.image.url}}" class="img-fluid radius-image" alt="">
+                </div>
+                <div class="content-right col-lg-6 pl-lg-4 mt-lg-0 mt-md-5 mt-5 align-self">
+                    <div class="row content4-right-grids mb-lg-5 mb-5">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-book"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url">{{lesson.0.name1}}</a></h6>
+                            <p>{{lesson.0.description}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row content4-right-grids mb-lg-5 mb-5">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-sitemap"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url"> {{lesson.0.name2}}</a></h6>
+                            <p>{{lesson.0.description}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row content4-right-grids">
+                        <div class="col-2 content4-right-icon">
+                            <div class="content4-icon">
+                                <span class="fa fa-podcast"></span>
+                            </div>
+                        </div>
+                        <div class="col-10 content4-right-info">
+                            <h6><a href="#url"> {{lesson.0.name3}}</a></h6>
+                            <p>{{lesson.0.description}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //home block3 -->
+<!--/team-sec-->
+<section class="w3l-team-main" id="team">
+    <div class="team py-5">
+        <div class="container py-lg-5">
+            <h5 class="sub-hnytitle mb-2 text-center">Our Team</h5>
+            <h3 class="w3l-hnytitle mb-5 text-center">Aswesome Team</h3>
+            <div class="row team-row mt-md-5 mt-4">
+                {% for tem in team %}
+                <div class="col-lg-3 col-6 team-wrap">
+                    <div class="team-member text-center">
+                        <div class="team-img">
+                            <img src="{{tem.image.url}}" alt="" class="radius-image">
+                        </div>
+                        <a href="#url" class="team-title">{{tem.name}}</a>
+                        <p>{{tem.title}} </p>
+                        <div class="team-details text-center">
+                            <div class="socials mt-20">
+                                <a href="#url">
+                                    <span class="fa fa-facebook-f"></span>
+                                </a>
+                                <a href="#url">
+                                    <span class="fa fa-twitter"></span>
+                                </a>
+                                <a href="#url">
+                                    <span class="fa fa-instagram"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end team member -->
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+<!--//team-sec-->
+<!-- /progress-->
+<section class="w3l-progressblock py-5" id="seoservices">
+    <div class="container py-lg-5 py-md-3">
+        <div class="row">
+            <div class="col-lg-6 about-right-faq align-self">
+                <h5 class="sub-hnytitle mb-2">{{surfing.0.name}}</h5>
+                <h3 class="w3l-hnytitle">{{surfing.0.title}}</h3>
+                <p class="mt-lg-4 mt-3 mb-lg-5 mb-4">{{surfing.0.description}}</p>
+                <div class="progress-info info1">
+                    <h6 class="progress-tittle">Surfing <span class="">80%</span></h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-info info2">
+                    <h6 class="progress-tittle">Boats <span class="">95%</span>
+                    </h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-info info3">
+                    <h6 class="progress-tittle">Diving <span class="">75%</span></h6>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-6 left-wthree-img mt-lg-0 mt-4 pl-lg-5">
+                <img src="{{surfing.0.image.url}}" alt="" class="img-fluid radius-image">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //progress-->
+
+<!-- footer-28 block -->
+<section class="w3l-footer">
+    <footer class="footer-28">
+        <div class="container py-lg-3">
+            <div class="row footer-top-28">
+                <div class="col-lg-6 col-md-5 footer-list-28 mt-5">
+                    <h6 class="footer-title-28">Contact information</h6>
+                    <ul>
+                        <li>
+                            <p><strong>Address</strong> : #135 block, Barnard St. Brooklyn, London 10036, UK</p>
+                        </li>
+                        <li>
+                            <p><strong>Phone</strong> : <a href="tel:+(12)234-11-24">+(12)234-11-24</a></p>
+                        </li>
+                        <li>
+                            <p><strong>Email</strong> : <a href="mailto:example@mail.com">example@mail.com</a></p>
+                        </li>
+                    </ul>
+
+                    <div class="main-social-footer-28 mt-3">
+                        <ul class="social-icons">
+                            <li class="facebook">
+                                <a href="#link" title="Facebook">
+                                    <span class="fa fa-facebook" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="twitter">
+                                <a href="#link" title="Twitter">
+                                    <span class="fa fa-twitter" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="dribbble">
+                                <a href="#link" title="Dribbble">
+                                    <span class="fa fa-dribbble" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li class="google">
+                                <a href="#link" title="Google">
+                                    <span class="fa fa-google" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-7">
+                    <div class="row">
+                        <div class="col-sm-4 col-6 footer-list-28 mt-5">
+                            <h6 class="footer-title-28">Company</h6>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="blog.html">Blog Posts</a></li>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="#pricing">Pricing</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 col-6 footer-list-28 mt-5">
+                            <h6 class="footer-title-28">Quick Links</h6>
+                            <ul>
+                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="#signup">Create account</a></li>
+                                <li><a href="#learn">Care Center</a></li>
+                                <li><a href="#feedback">Site Feedack</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 footer-list-28 mt-5">
+                            <h6 class="footer-title-28">Support</h6>
+                            <ul>
+                                <li><a href="#URL">All Dogs</a></li>
+                                <li><a href="#URL">Care Advices</a></li>
+                                <li><a href="#URL">Care Support</a></li>
+                                <li><a href="#URL">Veterinary Help</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="midd-footer-28 align-center py-lg-4 py-3 mt-5">
+            <div class="container">
+                <p class="copy-footer-28 text-center"> &copy; 2020 Windsurf. All Rights Reserved. Design by <a href="https://w3layouts.com/">W3Layouts</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- /move top -->
+</section>
+<!-- //footer-28 block -->
+
+<!-- all js scripts and files here -->
+
+<script src="{% static 'js/theme-change.js' %}"></script>
+<!-- theme switch js (light and dark)-->
+
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+<!-- default jQuery -->
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<!-- script for tesimonials carousel slider -->
+<script>
+    $(document).ready(function() {
+        $("#owl-demo1").owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: false,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false
+                },
+                736: {
+                    items: 1,
+                    nav: false
+                },
+                1000: {
+                    items: 2,
+                    nav: false,
+                    loop: false
+                }
+            }
+        })
+    })
+</script>
+<!-- //script for tesimonials carousel slider -->
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script>
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
+        });
+
+        $('.popup-with-move-anim').magnificPopup({
+            type: 'inline',
+
+            fixedContentPos: false,
+            fixedBgPos: true,
+
+            overflowY: 'auto',
+
+            closeBtnInside: true,
+            preloader: false,
+
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-slide-bottom'
+        });
+    });
+</script>
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+    $(function() {
+        $('.navbar-toggler').click(function() {
+            $('body').toggleClass('noscroll');
+        })
+    });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+    $(window).on("scroll", function() {
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 80) {
+            $("#site-header").addClass("nav-fixed");
+        } else {
+            $("#site-header").removeClass("nav-fixed");
+        }
+    });
+
+    //Main navigation Active Class Add Remove
+    $(".navbar-toggler").on("click", function() {
+        $("header").toggleClass("active");
+    });
+    $(document).on("ready", function() {
+        if ($(window).width() > 991) {
+            $("header").removeClass("active");
+        }
+        $(window).on("resize", function() {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+        });
+    });
+</script>
+<!--//MENU-JS-->
+
+<!-- bootstrap js -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
+{% endblock content %}
